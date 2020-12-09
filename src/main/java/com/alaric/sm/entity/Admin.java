@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 /**
  * @ClassName Admin
- * @Description TODO Admin实体类
+ * @Description Admin实体类
  * @Author Alaric
- * @Date 2020/11/22
+ * @Date 2020/11/14
  **/
 
 @Data

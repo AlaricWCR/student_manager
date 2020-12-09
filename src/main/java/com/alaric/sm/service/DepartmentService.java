@@ -6,9 +6,9 @@ import java.util.List;
 
 /**
  * @ClassName DepartmentService
- * @Description TODO
+ * @Description DepartmentService
  * @Author Alaric
- * @Date 2020/11/24
+ * @Date 2020/11/17
  **/
 public interface DepartmentService {
     /**
@@ -16,6 +16,16 @@ public interface DepartmentService {
      *
      * @return List<Department>
      */
-    List<Department>  selectAll();
-}
+    List<Department> selectAll();
 
+    /**
+     * 新增院系
+     *
+     * @param  department入参
+     * @return int
+     */
+     int addDepartment(Department department);
+
+     int delDepartment(Department department,Integer id);
+
+}

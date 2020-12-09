@@ -7,9 +7,9 @@ import java.util.List;
 
 /**
  * @ClassName DepartmentDao
- * @Description TODO院系DAO接口
+ * @Description 院系DAO接口
  * @Author Alaric
- * @Date 2020/11/23
+ * @Date 2020/11/17
  **/
 public interface DepartmentDao {
     /**
@@ -19,4 +19,20 @@ public interface DepartmentDao {
      * @throws SQLException 异常
      */
     List<Department> getAll() throws SQLException;
+
+    /**
+     *
+     * @param department入参
+     * @return int
+     * @throws SQLException 异常
+     */
+     int insertDepartment(Department department)throws SQLException;
+    /**
+     * 删除
+     * @param department
+     * @return
+     * @throws SQLException
+     */
+    int deleteDepartment(Department department,int id)throws SQLException;
+
 }

@@ -1,26 +1,34 @@
 package com.alaric.sm.factory;
 
-import com.alaric.sm.entity.Admin;
-import com.alaric.sm.entity.Department;
-import com.alaric.sm.service.AdminService;
-import com.alaric.sm.service.DepartmentService;
-import com.alaric.sm.service.impl.AdminServiceImpl;
-import com.alaric.sm.service.impl.DepartmentServiceImpl;
+import com.alaric.sm.service.*;
+import com.alaric.sm.service.impl.*;
 
-import java.util.List;
 
 /**
  * @ClassName ServiceFactory
- * @Description TODO 工厂类
+ * @Description Service工厂类
  * @Author Alaric
- * @Date 2020/11/23
+ * @Date 2020/11/14
  **/
+
 public class ServiceFactory {
-    public static AdminService getAdminServiceInstance() {
-        return new AdminServiceImpl();
+    public static com.wl.sm.service.AdminService getAdminServiceInstance() {
+
+        return new com.wl.sm.service.impl.AdminServiceImpl();
     }
 
-    public static DepartmentService getDepartmentServiceInstance() {
-        return new DepartmentServiceImpl();
+    public static com.wl.sm.service.DepartmentService getDepartmentServiceInstance() {
+        return new com.wl.sm.service.impl.DepartmentServiceImpl();
+    }
+
+
+    public static com.wl.sm.service.ClazzService getClazzServiceInstance() {
+        return new com.wl.sm.service.impl.ClazzServiceImpl();
+    }
+
+    public static com.wl.sm.service.StudentService getStudentServiceInstance(){return new com.wl.sm.service.impl.StudentServiceImpl() ;}
+
+    public static com.wl.sm.service.RewardService getRewardServiceInstance(){return new com.wl.sm.service.impl.RewardServiceImpl();
     }
 }
+

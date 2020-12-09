@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 /**
  * @ClassName Department
- * @Description TODO 院系实体类
+ * @Description 院系实体系
  * @Author Alaric
- * @Date 2020/11/23
+ * @Date 2020/11/17
  **/
 
 @Data
@@ -20,4 +20,8 @@ public class Department {
     private Integer id;
     private String departmentName;
     private String logo;
+    @Override
+    public String toString() {
+        return this.departmentName;
+    }
 }

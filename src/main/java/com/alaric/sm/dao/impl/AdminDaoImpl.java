@@ -11,21 +11,22 @@ import java.sql.SQLException;
 
 /**
  * @ClassName AdminDaoImpl
- * @Description TODO
+ * @Description 接口的实现类
  * @Author Alaric
- * @Date 2020/11/22
+ * @Date 2020/11/14
  **/
-public class AdminDaoImpl implements AdminDao {
+
+public class AdminDaoImpl implements com.alaric.sm.dao.AdminDao {
     @Override
-    public Admin findAdminByAccount(String account) throws SQLException {
+    public Admin findAdminByAccount(String account) throws SQLException{
         JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
         Connection connection = jdbcUtil.getConnection();
-        String sql = "SELECT * FROM t_admin WHERE account = ? ";
+        String sql = "SELECT * FROM t_admin WHERE account = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
-        pstmt.setString(1, account);
+        pstmt.setString(1,account);
         ResultSet rs = pstmt.executeQuery();
         Admin admin = null;
-        while (rs.next()) {
+        while(rs.next()){
             int id = rs.getInt("id");
             String adminAccount = rs.getString("account");
             String password = rs.getString("password");
@@ -35,10 +36,11 @@ public class AdminDaoImpl implements AdminDao {
             admin.setAccount(adminAccount);
             admin.setPassword(password);
             admin.setAdminName(adminName);
+
         }
         rs.close();
         pstmt.close();
-        jdbcUtil.closeConnection();
+        jdbcUtil.closeConnect();
         return admin;
     }
 }

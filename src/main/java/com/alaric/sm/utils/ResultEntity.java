@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 /**
  * @ClassName ResultEntity
- * @Description TODO 返回结果实体
+ * @Description 返回结果实体
  * @Author Alaric
- * @Date 2020/11/23
+ * @Date 2020/11/14
  **/
 
 @Data
