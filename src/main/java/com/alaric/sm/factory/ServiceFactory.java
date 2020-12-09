@@ -12,23 +12,23 @@ import com.alaric.sm.service.impl.*;
  **/
 
 public class ServiceFactory {
-    public static com.wl.sm.service.AdminService getAdminServiceInstance() {
+    public static com.alaric.sm.service.AdminService getAdminServiceInstance() {
 
-        return new com.wl.sm.service.impl.AdminServiceImpl();
+        return new com.alaric.sm.service.impl.AdminServiceImpl();
     }
 
-    public static com.wl.sm.service.DepartmentService getDepartmentServiceInstance() {
-        return new com.wl.sm.service.impl.DepartmentServiceImpl();
+    public static com.alaric.sm.service.DepartmentService getDepartmentServiceInstance() {
+        return new com.alaric.sm.service.impl.DepartmentServiceImpl();
     }
 
 
-    public static com.wl.sm.service.ClazzService getClazzServiceInstance() {
-        return new com.wl.sm.service.impl.ClazzServiceImpl();
+    public static com.alaric.sm.service.ClazzService getClazzServiceInstance() {
+        return new com.alaric.sm.service.impl.ClazzServiceImpl();
     }
 
-    public static com.wl.sm.service.StudentService getStudentServiceInstance(){return new com.wl.sm.service.impl.StudentServiceImpl() ;}
+    public static com.alaric.sm.service.StudentService getStudentServiceInstance(){return new com.alaric.sm.service.impl.StudentServiceImpl() ;}
 
-    public static com.wl.sm.service.RewardService getRewardServiceInstance(){return new com.wl.sm.service.impl.RewardServiceImpl();
+    public static com.alaric.sm.service.RewardService getRewardServiceInstance(){return new com.alaric.sm.service.impl.RewardServiceImpl();
     }
 }
 
